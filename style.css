@@ -79,18 +79,16 @@ h1 {
     font-size: 0.85rem;
     color: red;
     font-style: italic;
-    animation: blink 0.5s linear 2;
 }
+
+.blinkWarningMsg {
+        animation: blink 0.5s linear 2;
+}
+
 @keyframes blink {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 /* completed text section */

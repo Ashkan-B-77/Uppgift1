@@ -28,6 +28,7 @@ function addTodoItem(){
     // ----- Warning message -----
     if (inputText.trim() === "") { 
         elWarningMsg.textContent = "Input must not be empty";
+        elWarningMsg.setAttribute("class", "blinkWarningMsg")
         return;
     }
     elWarningMsg.textContent = ""; 
