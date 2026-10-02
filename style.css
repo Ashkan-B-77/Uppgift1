@@ -1,0 +1,100 @@
+/* body */
+body {
+    background-color: pink; /* responsive design */
+    background-image: linear-gradient(to top, #FE7F7E, #FEC6C5);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* main heading */
+h1 {
+    font-family: serif, Georgia, 'Times New Roman', Times;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+/* list items */
+#taskList li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 20px;
+    padding: 3px;        
+}
+
+/* list items (contents only) */
+#taskList li span {
+    cursor: pointer; 
+    padding: 4px;
+    margin: 4px;
+    border-radius: 5px 10px;
+}
+
+/* delete button */
+.deleteBtn {
+    cursor: pointer;
+    background-color: rgb(55, 55, 55);
+    transition: 0.3s;
+    border-radius: 25px;
+    padding: 2px;
+}
+.deleteBtn:hover {
+    background-color:rgba(77, 75, 159, 0.7);
+    color: rgba(205, 205, 205, 0.9);
+}
+
+/* OK button */
+#addTaskBtn {
+    background-color: #EEEDEE;
+    border-radius: 4px;
+}
+#addTaskBtn:hover {
+    background-color: #E0E1E0;
+}
+
+/* task input box */
+#taskInput {
+    width: 20%;
+    min-width: 250px;
+    max-width: 400px;
+    border-radius: 3px;
+    padding: 2px;
+}
+
+/* completed list items */
+.completed {
+    text-decoration: line-through;
+    color: rgb(117, 116, 116);
+}
+
+/* warning message */
+#warningMsg { 
+    font-size: 0.85rem;
+    color: red;
+    font-style: italic;
+    animation: blink 0.5s linear 2;
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* completed text section */
+#numOfCompletesText {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+}
