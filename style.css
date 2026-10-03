@@ -8,7 +8,7 @@ body {
     display: flex;
     justify-content: center;
     align-items:first baseline;
-    padding-top: 10px;
+    padding-top: 15px;
     
 }
 
@@ -21,7 +21,7 @@ body {
     text-align: center;
     background-color: white;
     width: 700px;
-    padding: 40px; 
+    padding: 10px 10px 30px 10px; 
     box-shadow: 0 0 15px -5px black;
 }
 
@@ -60,6 +60,9 @@ h1 {
     padding: 2px;
     font-size: 23px;
     background: none;
+}
+.deleteBtn:active {
+    filter: brightness(0.5) contrast(1.3);
 }
 
 /* OK button */
@@ -100,7 +103,9 @@ h1 {
 
 /* warning message */
 #warningMsg { 
-    font-size: 0.85rem;
+    font-size: 1.4rem;
+    margin-right: 5%;
+    margin-top: 1%;
     color: red;
     font-style: italic;
 }
