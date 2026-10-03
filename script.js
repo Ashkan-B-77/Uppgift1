@@ -26,9 +26,15 @@ function addTodoItem(){
     const inputText = elTaskInput.value; 
 
     // ----- Warning message -----
+    function triggerWarningBlink() { // This function is here because the browser can only do the warning animation once per refresh without it.
+        elWarningMsg.classList.remove("blinkWarningMsg");
+        void elWarningMsg.offsetWidth; // Reads the element's width to force a reflow to the browser (recalculating the layout), so the next style change is seen as new, and not together with the last one. Void is here just to signal that the value itself is intentionally unused.
+        elWarningMsg.classList.add("blinkWarningMsg");
+    }
+
     if (inputText.trim() === "") { 
         elWarningMsg.textContent = "Input must not be empty";
-        elWarningMsg.setAttribute("class", "blinkWarningMsg")
+        triggerWarningBlink(); // For the animation function above.
         return;
     }
     elWarningMsg.textContent = ""; 

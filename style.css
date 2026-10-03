@@ -74,6 +74,11 @@ h1 {
     color: rgb(117, 116, 116);
 }
 
+/* completed text section */
+#numOfCompletesText {
+
+}
+
 /* warning message */
 #warningMsg { 
     font-size: 0.85rem;
@@ -82,7 +87,7 @@ h1 {
 }
 
 .blinkWarningMsg {
-        animation: blink 0.5s linear 2;
+        animation: blink 0.4s linear 2;
 }
 
 @keyframes blink {
@@ -91,8 +96,3 @@ h1 {
     100% {opacity: 1;}
 }
 
-/* completed text section */
-#numOfCompletesText {
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-weight: bold;
-}
