@@ -72,7 +72,7 @@ function addTodoItem(){
 
     // ----- Creates a delete button and adds it to the list items -----
     const newDeleteBtn = document.createElement("button");
-    newDeleteBtn.textContent = "🗑️"; 
+    newDeleteBtn.textContent = "🗑️"; // This icon looks different on a Mac.
     newDeleteBtn.setAttribute("class", "deleteBtn"); 
     newItem.appendChild(newDeleteBtn); 
 
