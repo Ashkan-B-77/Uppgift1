@@ -17,12 +17,43 @@ body {
 }
 
 /* -------------------- main section -------------------- */
+/* set initial opacity to 0 for the animation, the > part means it targets direct children of #main only and not nested items like li */
+#main > h1 {
+    opacity: 0;
+    animation: mainTextAnimation 0.4s ease-out forwards;
+    animation-delay: 0.6s;
+}
+
+#main > #numOfCompletesText {
+    opacity: 0;
+    animation: mainTextAnimation 0.4s ease-out forwards;
+    animation-delay: 0.9s;
+}
+
+#main > #taskInput,
+#main > #addTaskBtn {
+    opacity: 0;
+    animation: mainTextAnimation 0.4s ease-out forwards;
+    animation-delay: 1.2s;
+}
+
 #main {
     text-align: center;
     background-color: white;
     width: 700px;
     padding: 10px 10px 30px 10px; 
     box-shadow: 0 0 15px -5px black;
+    animation: mainAnimate 0.5s ease-out; 
+}
+
+@keyframes mainAnimate {
+    0% {opacity: 0; transform: translateY(150px);} 
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes mainTextAnimation {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }
 
 /* -------------------- main heading -------------------- */
@@ -44,7 +75,7 @@ h1 {
     font-size: 35px;
     padding: 10px; 
     list-style: none; 
-    animation: taskAnimate 0.4s ease-out;
+    animation: taskAnimate 0.2s ease-in;    
 }
 
 #taskList li span {
@@ -97,13 +128,13 @@ h1 {
 .completed {
     text-decoration: line-through;
     color: rgb(117, 116, 116);
+    transition: color 0.6s ease 1s;
 }
 
 /* -------------------- completed text section -------------------- */
 #numOfCompletesText {
     font-size: 20px;
     margin-bottom: 40px;
-
 }
 
 /* -------------------- warning message -------------------- */
