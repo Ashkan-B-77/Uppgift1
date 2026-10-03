@@ -1,4 +1,4 @@
-/* body */
+/* -------------------- body -------------------- */
 body {
     background-color: pink; /* responsive design */
     background-image: linear-gradient(to top, #FE7F7E, #FEC6C5);
@@ -16,7 +16,7 @@ body {
     box-sizing: border-box;
 }
 
-/* main section */
+/* -------------------- main section -------------------- */
 #main {
     text-align: center;
     background-color: white;
@@ -25,7 +25,7 @@ body {
     box-shadow: 0 0 15px -5px black;
 }
 
-/* main heading */
+/* -------------------- main heading -------------------- */
 h1 {
     font-family: serif, Georgia, 'Times New Roman', Times;
     font-weight: bold;
@@ -34,7 +34,7 @@ h1 {
     padding: 10px;
 }
 
-/* list items */
+/* -------------------- list items -------------------- */
 #taskList {
     margin-right: 15%;
     text-align: center;
@@ -44,16 +44,21 @@ h1 {
     font-size: 35px;
     padding: 10px; 
     list-style: none; 
+    animation: taskAnimate 0.4s ease-out;
 }
 
-/* list items (contents only) */
 #taskList li span {
     cursor: pointer; 
     padding: 10px;
     margin: 10px;
 }
 
-/* delete button (icons look different on a Mac) */
+@keyframes taskAnimate {
+    0% {opacity: 0; transform: translateY(15px);} /* "The CSS translateY() function allows you to re-position an element along the y-axis (vertically)." */
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+/* -------------------- delete button (icons look different on a Mac) -------------------- */
 .deleteBtn {
     cursor: pointer;
     border: none;
@@ -65,7 +70,7 @@ h1 {
     filter: brightness(0.5) contrast(1.3);
 }
 
-/* OK button */
+/* -------------------- OK button -------------------- */
 #addTaskBtn {
     background-color: #EEEDEE;
     border-radius: 4px;
@@ -88,20 +93,20 @@ h1 {
     outline: 2px solid #4f76f5; 
 }
 
-/* completed list items */
+/* -------------------- completed list items -------------------- */
 .completed {
     text-decoration: line-through;
     color: rgb(117, 116, 116);
 }
 
-/* completed text section */
+/* -------------------- completed text section -------------------- */
 #numOfCompletesText {
     font-size: 20px;
     margin-bottom: 40px;
 
 }
 
-/* warning message */
+/* -------------------- warning message -------------------- */
 #warningMsg { 
     font-size: 1.4rem;
     margin-right: 5%;
